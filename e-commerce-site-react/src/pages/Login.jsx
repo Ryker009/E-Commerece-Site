@@ -1,22 +1,4 @@
-// function Login() {
-//   return (
-//     <div className="login-page">
-//       <h2>Login</h2>
-//       <form className="login-form">
-//         <input type="email" placeholder="Email" required />
-//         <input type="password" placeholder="Password" required />
-//         <button type="submit">Login</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-// export default Login;
-
-
-
-
-import './Login.css'; // Make sure you move the CSS to Login.css or global style.css
+import './Login.css';
 
 function Login() {
   return (
@@ -31,7 +13,7 @@ function Login() {
             <h1>Login</h1>
           </div>
           <div className="inputbx">
-            <input type="text" id="username" placeholder="Username" />
+            <input type="email" id="username" placeholder="Enter your email" />
           </div>
           <div className="inputbx">
             <input type="password" id="password" placeholder="Password" />

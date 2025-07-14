@@ -1,10 +1,15 @@
 import ProductList from '../components/ProductList';
-
 import ImageSlider from '../components/ImageSlider';
+
+import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div className="home">
+
+    <div>
+
+      <main className="products-container">
+      <div className="home">
 
         <ImageSlider />
 
@@ -14,6 +19,11 @@ function Home() {
 
       <ProductList />
     </div>
+    </main>
+    <Footer />
+    </div>
+    
+    
   );
 }
 

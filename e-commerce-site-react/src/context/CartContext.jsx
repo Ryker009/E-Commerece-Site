@@ -1,5 +1,7 @@
 import { createContext, useState, useEffect } from 'react';
 
+import { toast } from 'react-toastify';
+
 export const CartContext = createContext();
 
 export function CartProvider({ children }) {
@@ -13,16 +15,20 @@ export function CartProvider({ children }) {
   }, [cart]);
 
   const addToCart = (product) => {
-    setCart((prev) => [...prev, product]);
-  };
+  setCart([...cart, product]);
+  toast.success(`${product.name} added to cart!`);
+};
 
-  const removeFromCart = (id) => {
-    setCart((prev) => prev.filter((item) => item.id !== id));
-  };
+const removeFromCart = (id) => {
+  const item = cart.find(p => p.id === id);
+  setCart(cart.filter(p => p.id !== id));
+  toast.error(`${item?.name || "Item"} removed from cart`);
+};
 
-  const clearCart = () => {
-    setCart([]);
-  };
+const clearCart = () => {
+  setCart([]);
+  toast.info("Cart cleared");
+};
 
   return (
     <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>

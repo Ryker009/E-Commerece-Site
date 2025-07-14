@@ -61,6 +61,7 @@ body.dark {
 }
 
 .product-card .box{
+  border-radius: 5px;
   overflow: hidden;
 }
 
@@ -77,10 +78,11 @@ body.dark .product-card {
 }
 
 .product-card img {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
+  border-radius: 5px;
 }
 
 .product-card img:hover {
@@ -253,5 +255,72 @@ body.dark .cart-items {
   font-weight: bold;
 }
 
+/* cart badge */
+.cart-text-with-badge {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+}
 
+.cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -15px;
+  background-color: crimson;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
 
+.login-badge{
+  padding: 0 0 0 5px;
+}
+
+/* Footer */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-radius: 5px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-left: 5vw;
+}
+
+.footer-top div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1rem;
+  border-top: 1px solid #555;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
