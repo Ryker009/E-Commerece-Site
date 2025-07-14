@@ -1,0 +1,125 @@
+/* Only affects the login page */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  height: 78vh;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+.login-wrapper .login {
+  position: absolute;
+}
+
+.login-wrapper .inputbx input {
+  cursor: pointer;
+  color: rgb(253, 253, 253);
+}
+
+.login-wrapper .inputbx input::placeholder {
+  color: rgb(253, 253, 253);
+}
+
+.login-wrapper .heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  color: aliceblue;
+}
+
+.login-wrapper .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 500px;
+  width: 500px;
+}
+
+.login-wrapper .box i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  transition: 0.5s;
+}
+
+.login-wrapper .box i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+.login-wrapper .box i:nth-child(2) {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+.login-wrapper .box i:nth-child(3) {
+  border-radius: 41% 44% 56% 59% / 38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+.login-wrapper .box:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+.login-wrapper .other {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+.login-wrapper .other a {
+  text-decoration: none;
+  transition: color 0.3s;
+  color: aliceblue;
+}
+.login-wrapper .other a:hover {
+  color: red;
+}
+
+.login-wrapper #username,
+.login-wrapper #password,
+.login-wrapper #sign_in {
+  width: 250px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 25px;
+  border: 2px solid white;
+  background: #222;
+}
+
+.login-wrapper input {
+  padding: 0 20px;
+}
+
+.login-wrapper #sign_in {
+  width: 290px;
+  cursor: pointer;
+  transition: color 0.3s;
+  background: linear-gradient(45deg, red, yellow);
+  font-weight: bold;
+  color: aliceblue;
+}
+
+.login-wrapper #sign_in:hover {
+  color: rgb(3, 29, 10);
+  background: linear-gradient(45deg, red, rgb(231, 217, 96));
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
